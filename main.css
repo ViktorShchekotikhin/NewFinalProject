@@ -30,6 +30,9 @@ h5,
 h6 {
     font-family: 'Catamaran', sans-serif;
 }
+.entry-title{
+    height:80px;
+}
 
 /* Navbar */
 
@@ -80,7 +83,7 @@ h6 {
 }
 .navbar-light .navbar-brand{
     padding: 0 1em;
-    padding-right: 10em; 
+    /* padding-right: 10em;  */
 }
 .navbar-light .navbar-nav a{
     padding-left: 1em;
@@ -124,6 +127,7 @@ h6 {
 max-width: 1000px;
 }
 
+
 /* Home section */
 
 header #home{
@@ -142,7 +146,6 @@ header #home{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 .main-logo{
     height: 300px;
@@ -215,10 +218,12 @@ p.text-about-page{
     overflow: hidden;
     position: relative;
     width:1000px;
-    margin:25px auto;
+    margin:0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
   }
   
-  .banner-container ul { height: 639px; }
+  .banner-container ul { height: 600px; width: 900px; }
   
   .banner-container li {
     float: left;
@@ -242,8 +247,8 @@ p.text-about-page{
     left: 0px;
   }
   ul.ul-width{
-      padding: 0;
-      width: 1000px;
+    padding: 0;
+    width: 1000px;
   }
   
 /* Releases section */

@@ -1,4 +1,4 @@
-let offset = 20;
+// let offset = 20;
 // $('.navbar li a').click(function (event) {
 //     event.preventDefault();
 //     $($(this).attr('href'))[0].scrollIntoView();
@@ -19,7 +19,7 @@ $(function () {
 
 // Portfolio
 $(window).load(function () {
-    var sum = 0;
+    var sum = 0; //-3530
     $('.banner-container li img').each(function () {
         sum += $(this).width();
     });
