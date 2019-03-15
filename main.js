@@ -1,18 +1,48 @@
 let offset = 20;
+// $('.navbar li a').click(function (event) {
+//     event.preventDefault();
+//     $($(this).attr('href'))[0].scrollIntoView();
+//     scrollBy(0, -offset);
+// });
 
-$('.navbar li a').click(function(event) {
-    event.preventDefault();
-    $($(this).attr('href'))[0].scrollIntoView();
-    scrollBy(0, -offset);
+$(function () {
+    $('.smooth').on('click', function (event) {
+        const target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
 });
 
+// Portfolio
+$(window).load(function () {
+    var sum = 0;
+    $('.banner-container li img').each(function () {
+        sum += $(this).width();
+    });
+    $('.banner-container ul').width(sum);
+});
 
-
-$(document).ready(function(){
-    $("body header #scrl").on("click","a",function (event){
-        event.preventDefault();
-        let id = $(this).attr('href'),
-        top = $(id).offset().top();
-        $('body,html').animate({scrollTop: top}, 1500);
+$(function () {
+    var winWidth = $(".banner-container").width();
+    var ulWidthCount = 0;
+    ulWidthCount = $('.banner-container li').size();
+    $(".banner-container li").width(winWidth / ulWidthCount);
+    $(".banner-container li").hover(function () {
+        ulWidthCount = $('.banner-container li').size();
+        var imgWidth = $(this).find("img").width();
+        var bannerLi = winWidth - imgWidth;
+        var remWidth = ulWidthCount - 1;
+        var appWidth = bannerLi / remWidth;
+        $(".banner-container li").stop(true, false).animate({ width: appWidth }, 700);
+        $(this).stop(true, false).animate({ width: imgWidth }, 700);
+        $(this).find("span.overlay").stop(true, false).fadeOut();
+    }, function () {
+        $(this).animate({ width: winWidth / ulWidthCount }, 700);
+        $(".banner-container li").animate({ width: winWidth / ulWidthCount }, 700);
+        $(this).find("span.overlay").fadeIn();
     });
 });

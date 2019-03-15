@@ -203,9 +203,7 @@ p.text-about-page{
     padding: 0vmin 0vmin 3vmin 0vmin;
 
 }
-/* .grid-padding{
-    padding: 0vmin 0vmin 3vmin 0vmin;
-} */
+
 
 /* Portfolio section */
 .under-grid-title-holder{
@@ -213,6 +211,41 @@ p.text-about-page{
     padding:2vmin 0vmin 5vmin 0vmin;
 }
 
+.banner-container {
+    overflow: hidden;
+    position: relative;
+    width:1000px;
+    margin:25px auto;
+  }
+  
+  .banner-container ul { height: 639px; }
+  
+  .banner-container li {
+    float: left;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+  }
+  
+  .banner-container li a {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .banner-container li span.overlay {
+    background: url(../images/bg-overlay.png) repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  ul.ul-width{
+      padding: 0;
+      width: 1000px;
+  }
+  
 /* Releases section */
 .release-pading{
     padding: 0vmin 0vmin 3vmin 0vmin;
